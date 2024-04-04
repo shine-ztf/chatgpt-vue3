@@ -1,0 +1,17 @@
+/dist
+/node_modules
+/deploy
+*.yml
+*.yaml
+*.test.ts
+tsconfig.json
+*.svg
+*.png
+*.jpg
+*.jpeg
+*.scss
+*.gif
+*.webp
+*.ttf
+index.html
+*.md
