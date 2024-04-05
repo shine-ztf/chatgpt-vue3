@@ -1,9 +1,10 @@
+import type { App } from 'vue'
 import { createRouter, createWebHistory, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 
 // 主要tabbar
 export const layoutRoutes: Array<RouteRecordRaw> = [
 	{
-		path: '/',
+		path: '/home',
 		name: 'home',
 		meta: {
 			title: 'home',
@@ -12,29 +13,12 @@ export const layoutRoutes: Array<RouteRecordRaw> = [
 		component: () => import('@/views/home/index.vue'),
 	},
 	{
-		path: '/category',
-		name: 'category',
+		path: '/user',
+		name: 'user',
 		meta: {
-			title: 'category',
-			// keepAlive: true,
+			title: 'user',
 		},
-		component: () => import('@/views/category/index.vue'),
-	},
-	{
-		path: '/mycenter',
-		name: 'mycenter',
-		meta: {
-			title: 'mycenter',
-		},
-		component: () => import('@/views/mycenter/index.vue'),
-	},
-	{
-		path: '/shopcart',
-		name: 'shopcart',
-		meta: {
-			title: 'shopcart',
-		},
-		component: () => import('@/views/shopcart/index.vue'),
+		component: () => import('@/views/user/index.vue'),
 	},
 ]
 
@@ -42,7 +26,7 @@ export const routes: Array<RouteRecordRaw> = [
 	{
 		path: '/',
 		component: () => import('@/layout/index.vue'),
-		redirect: '/index',
+		redirect: '/home',
 		// 需要layout的页面
 		children: layoutRoutes,
 	},
@@ -51,6 +35,11 @@ export const routes: Array<RouteRecordRaw> = [
 		path: '/login',
 		name: 'login',
 		component: () => import('@/views/login/index.vue'),
+	},
+	{
+		path: '/chat',
+		name: 'chat',
+		component: () => import('@/views/chat/index.vue'),
 	},
 	{
 		path: '/account',
@@ -72,4 +61,6 @@ router.beforeEach((_to, _from, next) => {
 	next()
 })
 
-export default router
+export function setupRouter(app: App<Element>) {
+	app.use(router)
+}

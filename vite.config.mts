@@ -83,7 +83,7 @@ export default defineConfig({
 			'@': path.resolve(__dirname, './src'), //把 src 的别名设置为 @
 			'@/assets': path.resolve(__dirname, './src/assets'),
 		},
-		extensions: ['.mjs', '.ejs', '.tsx', '.jsx', '.js', '.json', '.ts'], // 这些类型的文件后缀的不需要写
+		extensions: ['.mjs', '.ejs', '.tsx', '.jsx', '.js', '.json', '.ts','.vue'], // 这些类型的文件后缀的不需要写
 	},
 	build: {
 		outDir: path.resolve(__dirname, 'dist'), // 打包输出文件夹

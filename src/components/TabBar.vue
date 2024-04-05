@@ -14,33 +14,18 @@ import { ref } from 'vue'
 
 const tabBar = [
 	{
-		title: '精选',
+		title: '首页',
 		to: {
 			name: 'home',
 		},
 		icon: 'home-o',
 	},
 	{
-		title: '版本介绍',
-		to: {
-			name: 'category',
-		},
-		icon: 'apps-o',
-	},
-	{
-		title: '购物车',
-		to: {
-			name: 'shopcart',
-		},
-		icon: 'shopping-cart-o',
-		badge: 0,
-	},
-	{
 		title: '我的',
 		to: {
-			name: 'mycenter',
+			name: 'user',
 		},
-		icon: 'contact-o',
+		icon: 'user-o',
 	},
 ]
 

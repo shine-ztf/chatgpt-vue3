@@ -1,5 +1,5 @@
 {
-	"name": "vue3.3-mobile-template",
+	"name": "chatgpt-vue3",
 	"private": true,
 	"version": "0.0.1",
 	"scripts": {
@@ -8,13 +8,14 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"lint": "eslint ./src/**/*{.js,.jsx,.ts,.tsx,.vue} --fix",
-		"prettier": "prettier --write **/*.{js,jsx,json,ts,tsx,css,less,scss,vue,html,md}",
+		"prettier": "prettier --write **/*.{js,jsx,json,ts,tsx,css,less,scss,vue,html}",
 		"prepare": "husky install"
 	},
 	"dependencies": {
 		"@nutui/nutui": "3",
 		"axios": "^1.6.4",
 		"core-js": "^3.35.0",
+		"js-cookie": "^3.0.5",
 		"lodash-es": "^4.17.21",
 		"pinia": "^2.1.7",
 		"pinia-plugin-persistedstate": "2.3.0",

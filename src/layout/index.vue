@@ -23,7 +23,6 @@ const routerStrArr = ['home']
 
 <style scoped lang="scss">
 .layout-container {
-	// margin-bottom: 100px;
 	min-height: 100vh;
 }
 </style>

@@ -11,19 +11,20 @@ import '@/assets/iconfont/iconfont.js'
 // 引入阿里巴巴普惠体 2.0字体
 import '@/assets/iconfont/font/font.css'
 
-// 这是移动端控制台调试工具，需要调试就打开,不用就注释
-// import '@/utils/vconsole.ts'
-
 import { createApp } from 'vue'
 import App from '@/App.vue'
-import router from './router' // 封装的路由
-import { pinia } from './store' // 封装的模块化pinia store
+
+import { setupStore } from '@/store' // 封装的模块化pinia store
+import { setupRouter } from '@/router' // 封装的路由
+import { useVconsole } from '@/utils/vconsole'
+import { injectApi } from '@/utils/global' // 全局模块
 import 'vant/es/toast/style'
 import 'vant/es/dialog/style'
-import { Toast, Dialog } from 'vant'
 
 const app = createApp(App)
-app.use(Toast)
-app.use(Dialog)
+injectApi(app) // 注册一些全局模块
+setupStore(app) // 注册全局仓库
+setupRouter(app) // 注册路由
+useVconsole(app) // 是否启用Vconsole，根据环境决定
 
-app.use(pinia).use(router).mount('#app')
+app.mount('#app')

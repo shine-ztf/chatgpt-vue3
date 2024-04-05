@@ -3,7 +3,7 @@ import { defineStore, acceptHMRUpdate } from 'pinia'
 export const userStore = defineStore({
 	id: 'user',
 	state: () => ({
-		name: '很老很老的值',
+		name: 'chatgpt',
 	}),
 	getters: {
 		myName: state => {

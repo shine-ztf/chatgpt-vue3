@@ -4,7 +4,8 @@
 		"skipLibCheck": true,
 		"module": "ES2020",
 		"moduleResolution": "node",
-		"allowSyntheticDefaultImports": true
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true
 	},
-	"include": ["vite.config.ts", "src/**/*.ts", "global/*.ts", "vite-env.d.ts"]
+	"include": ["vite.config.mts", "src/**/*.ts", "global/*.ts", "vite-env.d.ts"]
 }

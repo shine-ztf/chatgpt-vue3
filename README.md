@@ -58,7 +58,7 @@ learn-vite -- UI 主目录
 ├── tsconfig.json -- vscode 路径引入配置
 ├── index.html -- 首页  
 ├── package.json -- 依赖管理  
-├── vite.config.ts -- vite5的相关配置 
+├── vite.config.mts -- vite5的相关配置 
 └── windi.config.ts -- WindiCSS的配置文件
 ```
 
@@ -342,7 +342,7 @@ import { fileServerAddress } from '@/global/env'
 
 总共分为4步：
 
-1、vite.config.ts
+1、vite.config.mts
 
 ```js
 import path from 'path'
@@ -578,7 +578,7 @@ const routerStrArr = ['home']
 
 ### 2、为每次打包的文件后缀添加打包时的时间戳，防止打包上线页面缓存的问题
 
-vite.config.ts  timeStamp
+vite.config.mts  timeStamp
 
 ### 3、为index.html增加防盗链，解决图片403
 
@@ -713,7 +713,7 @@ https://blog.csdn.net/Steven_Son/article/details/135414494?spm=1001.2014.3001.55
 	"moduleResolution": "node",
 	"allowSyntheticDefaultImports": true
   },
-  	"include": ["vite.config.ts", "src/**/*.ts", "global/*.ts"]
+  	"include": ["vite.config.mts", "src/**/*.ts", "global/*.ts"]
 ```
 
 5、在src下新建vite-env.d.ts ,解决ts无法识别引入.vue后缀的文件夹
@@ -778,7 +778,7 @@ nvm use 16   切换后souceTree重新提交代码
 $theme-color: #af1d36;
 ```
 2、记得在vite.config.ts配置一下这个文件路径，否则页面用了找不着
-vite.config.ts
+vite.config.mts
 ```js
 export default defineConfig({
 	css:{

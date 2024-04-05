@@ -12,3 +12,10 @@ tsconfig.json
 *.ttf
 index.html
 *.md
+
+#指定某文件夹包括里面的所有文件都忽略
+src/assets
+vite.config.ts
+
+#指定某文件夹里面的指定文件类型都忽略
+build/*.js

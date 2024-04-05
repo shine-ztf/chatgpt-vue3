@@ -6,16 +6,20 @@
 export {}
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    RouterLink: typeof import('vue-router')['RouterLink']
-    RouterView: typeof import('vue-router')['RouterView']
-    TabBar: typeof import('./src/components/TabBar.vue')['default']
-    VanCell: typeof import('vant/es')['Cell']
-    VanCollapse: typeof import('vant/es')['Collapse']
-    VanCollapseItem: typeof import('vant/es')['CollapseItem']
-    VanImage: typeof import('vant/es')['Image']
-    VanNavBar: typeof import('vant/es')['NavBar']
-    VanTabbar: typeof import('vant/es')['Tabbar']
-    VanTabbarItem: typeof import('vant/es')['TabbarItem']
-  }
+	export interface GlobalComponents {
+		RouterLink: (typeof import('vue-router'))['RouterLink']
+		RouterView: (typeof import('vue-router'))['RouterView']
+		SvgIcon: (typeof import('./src/components/SvgIcon.vue'))['default']
+		TabBar: (typeof import('./src/components/TabBar.vue'))['default']
+		VanButton: (typeof import('vant/es'))['Button']
+		VanCell: (typeof import('vant/es'))['Cell']
+		VanCollapse: (typeof import('vant/es'))['Collapse']
+		VanCollapseItem: (typeof import('vant/es'))['CollapseItem']
+		VanImage: (typeof import('vant/es'))['Image']
+		VanNavBar: (typeof import('vant/es'))['NavBar']
+		VanSwipe: (typeof import('vant/es'))['Swipe']
+		VanSwipeItem: (typeof import('vant/es'))['SwipeItem']
+		VanTabbar: (typeof import('vant/es'))['Tabbar']
+		VanTabbarItem: (typeof import('vant/es'))['TabbarItem']
+	}
 }
